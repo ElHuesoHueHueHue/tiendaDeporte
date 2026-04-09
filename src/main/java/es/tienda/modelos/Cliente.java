@@ -16,5 +16,6 @@ public class Cliente extends Persona{
     public void mostrarDatos(){
         //prueba de modificacion
         System.out.printf("Nombre: %s, DNI:%s, TipoCliente:%s",getNombre(),getDni(),tipoCliente);
+        System.out.println( );
     }
 }

@@ -11,7 +11,7 @@ public class Principal {
         List<Proveedor> proveedores = new ArrayList<>();
         List<Articulo> articulos = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 4; i++){
             System.out.print("Dime el nombre de tu cliente ");
             String nombre = Entrada.cadena();
             System.out.print("Dime el apellido de tu cliente ");
@@ -23,7 +23,7 @@ public class Principal {
             clientes.add(i,Cliente.alta(nombre,apellido,dni,tipo));
         }
 
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 3; i++){
             System.out.print("Dime el nombre de tu proveedor ");
             String nombre = Entrada.cadena();
             System.out.print("Dime el apellido de tu proveedor ");
@@ -35,14 +35,14 @@ public class Principal {
             proveedores.add(i,Proveedor.alta(nombre,apellido,dni,tipo));
         }
 
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 2; i++){
             System.out.print("Dime el código de tu articulo ");
             String codigo = Entrada.cadena();
             System.out.print("Dime la descripción de tu articulo ");
             String descripcion = Entrada.cadena();
             System.out.print("Dime el precio de tu articulo ");
             Double precio = Entrada.realDoble();
-            articulos.add(i,new Articulo(codigo,descripcion,precio));
+            articulos.add(i,Articulo.alta(codigo,descripcion,precio));
         }
 
         for (Cliente cliente : clientes){
