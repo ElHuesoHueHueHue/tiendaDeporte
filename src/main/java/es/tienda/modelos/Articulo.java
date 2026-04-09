@@ -18,4 +18,6 @@ public class Articulo {
     public void VisualizarDatos(Articulo articulo){
         System.out.printf("El articulo con código %s y descripción %s, tiene un precio de %5.2f", articulo.codigo,articulo.descripcion,articulo.precio);
     }
+
+    //.
 }
