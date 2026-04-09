@@ -6,7 +6,7 @@ public class Proveedor extends Persona {
 
 
     public Proveedor(String nombre, String apellidos, String dni, TipoProveedor tipoProveedor) {
-        super(nombre, apellidos, dni);
+        super(nombre, apellidos, dni, tipo);
         this.tipoProveedor = tipoProveedor;
     }
 
