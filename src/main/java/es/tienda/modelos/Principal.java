@@ -13,9 +13,9 @@ public class Principal {
 
         for (int i = 0; i < 4; i++){
             System.out.print("Dime el nombre de tu cliente ");
-            String nombre = Entrada.cadena();
+            String nombre = getNombre();
             System.out.print("Dime el apellido de tu cliente ");
-            String apellido = Entrada.cadena();
+            String apellido = getNombre();
             System.out.print("Dime el dni de tu cliente ");
             String dni = Entrada.cadena();
             System.out.print("Dime el tipo de cliente ");
@@ -57,5 +57,10 @@ public class Principal {
             articulo.visualizarDatos(articulo);
         }
 
+    }
+
+    private static String getNombre() {
+        String nombre = Entrada.cadena();
+        return nombre;
     }
 }
