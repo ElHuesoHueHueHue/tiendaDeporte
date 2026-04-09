@@ -8,7 +8,7 @@ import java.util.List;
 public class Principal {
     public static void main(String[] args) {
         List<Cliente> clientes = new ArrayList<>();
-        List<Proveedor> proveedor = new ArrayList<>();
+        List<Proveedor> proveedores = new ArrayList<>();
         List<Articulo> articulos = new ArrayList<>();
 
         for (int i = 0; i < 5; i++){
@@ -32,7 +32,7 @@ public class Principal {
             String dni = Entrada.cadena();
             System.out.print("Que tipo de proveedor es ");
             TipoProveedor tipo = TipoProveedor.valueOf(Entrada.cadena());
-            proveedor.add(i,Proveedor.alta(nombre,apellido,dni,tipo));
+            proveedores.add(i,Proveedor.alta(nombre,apellido,dni,tipo));
         }
 
         for (int i = 0; i < 3; i++){
@@ -44,5 +44,18 @@ public class Principal {
             Double precio = Entrada.realDoble();
             articulos.add(i,new Articulo(codigo,descripcion,precio));
         }
+
+        for (Cliente cliente : clientes){
+            cliente.mostrarDatos();
+        }
+
+        for (Proveedor proveedor : proveedores){
+            proveedor.mostrarDatos();
+        }
+
+        for (Articulo articulo : articulos){
+            articulo.visualizarDatos(articulo);
+        }
+
     }
 }
