@@ -3,12 +3,13 @@ package es.tienda.modelos;
 public class Cliente extends Persona{
     private TipoCliente tipoCliente;
 
-    public Cliente(String nombre, String apellidos, String dni, TipoCliente tipo){
-        super(nombre,apellidos,dni,tipo);
+    public Cliente(String nombre, String apellidos, String dni, TipoCliente tipoCliente){
+        super(nombre,apellidos,dni);
+        this.tipoCliente = tipoCliente;
     }
 
-    public static Cliente alta(String nombre, String apellidos, String dni, TipoCliente tipo) {
-        return new Cliente(nombre, apellidos, dni,tipo);
+    public static Cliente alta(String nombre, String apellidos, String dni, TipoCliente tipoCliente) {
+        return new Cliente(nombre, apellidos, dni,tipoCliente);
     }
 
     @Override
